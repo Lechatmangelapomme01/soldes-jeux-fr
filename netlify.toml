@@ -3,11 +3,19 @@
   publish = "dist"
   functions = "netlify/functions"
 
+# API -> Functions
 [[redirects]]
   from = "/api/*"
   to = "/.netlify/functions/:splat"
   status = 200
 
+# Route deals -> page exportée
+[[redirects]]
+  from = "/deals"
+  to = "/deals.html"
+  status = 200
+
+# Fallback SPA (garde pour les autres routes éventuelles)
 [[redirects]]
   from = "/*"
   to = "/index.html"
