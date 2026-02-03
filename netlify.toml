@@ -3,19 +3,11 @@
   publish = "dist"
   functions = "netlify/functions"
 
-# API -> Netlify Functions
 [[redirects]]
   from = "/api/*"
   to = "/.netlify/functions/:splat"
   status = 200
 
-# Rediriger la racine vers la vraie page
-[[redirects]]
-  from = "/"
-  to = "/deals"
-  status = 200
-
-# SPA fallback (Expo Router)
 [[redirects]]
   from = "/*"
   to = "/index.html"
